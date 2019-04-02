@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset=utf-8 />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" onSubmit="return alocaImagens('file1');" action="#">
+        <fieldset>
+          <div class="col-md-3 mb-3">
+            <label>NÚMERO DO DISTRIBUIDOR:</label><br>
+            <input type="number" class="form-control" id="numeroDistribuidor" name="Iddistribuidor" placeholder="" value="" required=""/>
+          </div>
+        </fieldset>
+        
+        <fieldset>
+          <legend>AUDITORIA DE MONTAGEM E ALINHAMENTO DOS MECANISMOS </legend>
+          <div class="form-group">
+            <div class="col-md-3 mb-3">
+              <label>Responsável:</label> <br>
+              <input class="form-control" type="text" name="Responsavel" id="audMecaResponsavel" required=""/>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Data:</label> <br>
+              <input class="form-control" type="date" name="Data" id="audMecaData" required=""/>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Turno:</label> <br>
+              <input class="form-control" type="number" name="Turno" id="audMecaTurno" required="" min="1" max="3" step="1"/>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Letra:</label> <br>
+              <input class="form-control" type="text" name="Letra" id="audMecaLetra" required="" />
+            </div>
+          </div> <br>
+          <div class="col-md-3 mb-3">
+            <span>1. Braços dos mecanismos (empeno, desgaste).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="bracos" id="audMecaBracoOk" placeholder="" value=""  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="bracos" id="audMecaBracoNaoOk" placeholder="" value=""  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>2. Proteção metálica do Braço.: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Protca" id="audMecaProtOk" placeholder="" value="Ok"  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Protca" id="audMecaProtNaoOk" placeholder="" value="Não Ok"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>3. Fixação do Tampão (aperto da haste e aperto do tubo de argônio).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Fixaca" id="audMecaFixacaoOk" placeholder="" value="Ok"  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Fixaca" id="audMecaFixacaoNaoOk" placeholder="" value="Não Ok"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>4. Check do gabarito osso de cachorro de abertura do tampão e medida de 120 ±5mm.: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Gabarito" id="audMecaCheckGabOk" placeholder="" value="Ok"  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Gabarito" id="audMecaCheckGabNaoOk" placeholder="" value="Não Ok"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>5. Tubulação de Argônio bem posicionada e com engate específico do LCP.: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Tubulaca" id="audMecaTubArgOk" placeholder="" value="Ok"  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Tubulaca" id="audMecaTubArgNaoOk" placeholder="" value="Não Ok"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>6. Movimentação e articulação dos mecanismos sem agarramento.: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Movimentaca" id="audMecaMovArtOk" placeholder="" value="Ok"  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Movimentaca" id="audMecaMovArtNaoOk" placeholder="" value="Não Ok"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>7. Encaixe dos cilíndros do mecanismo (limpeza, empeno, quebra).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Encaixe" id="audMecaEncaixeOk" placeholder="" value="Ok"  />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Encaixe" id="audMecaEncaixeNaoOk" placeholder="" value="Não Ok"  />
+              Não Ok
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>CHECKLIST DE LIBERAÇÃO DO DISTRIBUIDOR</legend>
+          <div class="form-group">
+            <div class="col-md-3 mb-3">
+              <label>Responsável:</label> <br>
+              <input class="form-control" type="text" name="Responsavel" id="checkLibResponsavel" required=""/>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Data:</label> <br>
+              <input class="form-control" type="date" name="Data" required="" id="checkLibData"/>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Turno:</label> <br>
+              <input class="form-control" type="number" name="Turno"  required="" min="1" max="3" step="1" id="checkLibTurno"/>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label>Letra:</label> <br>
+              <input class="form-control" type="text" name="Letra" required="" id="checkLibLetra"/>
+            </div>
+          </div>
+          
+          <div class="col-md-3 mb-3">
+            <span>1. Fixação do mecanismo (encaixe superior e aperto dos parafusos horizontais e verticais).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Fixaca" placeholder="" value=""  id="checkLibFixacaoOk"/>
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Fixaca" placeholder="" value=""  id="checkLibFixacaoNaoOk"/>
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>2. Limpeza interna do distribuidor (refratário solto, carepa, manta, etc).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Limpeza" placeholder="" value="Ok" id="checkLibLimpezaOk" />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Limpeza" placeholder="" value="Não Ok" id="checkLibLimpezaNaoOk" />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>3. Situação do corpo e ponta do tampão (sem lascamento ou trinca).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Situaca" placeholder="" value="Ok" id="checkLibSituacaoOk" />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Situaca" placeholder="" value="Não Ok" id="checkLibSituacaoNaoOk" />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>4. Barragens (trincas, deslocamento, se está travada no distribuidor).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Barragens" placeholder="" value="Ok" id="checkLibBarragensOk" />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Barragens" placeholder="" value="Não Ok" id="checkLibBarragensNaoOk"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>5. Projeção (queda, deslocamento).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Projeca" placeholder="" value="Ok" id="checkLibProjecaoOk" />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Projeca" placeholder="" value="Não Ok" id="checkLibProjecaoNaoOk"  />
+              Não Ok
+            </label>
+          </div>
+          <div class="col-md-3 mb-3">
+            <span>6. Inibidor de turbulência (sem trincas, bem travado no distribuidor).: </span>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Inibidor" placeholder="" value="Ok" id="checkLibInibidorOk" />
+              Ok
+            </label>
+            <label class="radio-inline">
+              <input type="radio" class="form-control" name="Inibidor" placeholder="" value="Não Ok" id="checkLibInibidorNaoOk" />
+              Não Ok
+            </label>
+          </div>
+        </fieldset><br>
+        <fieldset>
+          <div class="col-md-3 mb-3">
+            <label>OBSERVAÇÕES NECESSÁRIAS:</label> <br>
+            <input class="form-control" type="text" name="Observacoes" id="observacoes" size="40" />
+          </div>
+        </fieldset><br>
+        <fieldset>
+          <legend>IMAGENS</legend>
+          <input type="file" id="file1" required/><br><br>
+          <input type="file" id="file2" required/><br><br>
+          <input type="file" id="file3" required/><br><br>
+          <input type="file" id="file4" required/><br>
+        </fieldset>
+        <br><br><input type="button" onClick="alocaImagens('file1');" value="Enviar"/>
+      </form>
+    </div>
+  </body>
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+  <script>
+    var doc = new jsPDF();
+    var input, file, fr, img, files = [], contador = 0, flinput = ['file1', 'file2', 'file3', 'file4'];
+  function salvarPDF(){
+    var frm = document.getElementById('form');
+    doc.setFontSize(15);
+    doc.text(15, 25, 'Número do distribuidor: ' + frm.numeroDistribuidor.value);
+    doc.setFontSize(12);
+    doc.text(15, 35, 'AUDITORIA DE MONTAGEM E ALINHAMENTO DOS MECANISMOS');
+    doc.text(15, 40, 'Responsável: ' + frm.audMecaResponsavel.value);
+    doc.text(15, 45, 'Data: ' + frm.audMecaData.value);
+    doc.text(15, 50, 'Turno: ' + frm.audMecaTurno.value);
+    doc.text(15, 55, 'Letra: ' + frm.audMecaLetra.value);
+    doc.text(15, 60, 'Braços do Mecanisco: ' + (frm.audMecaBracoOk.checked ? 'OK' : frm.audMecaBracoNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 65, 'Proteção metálica do Braço: ' + (frm.audMecaProtOk.checked ? 'OK' : frm.audMecaProtNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 70, 'Fixação do Tampão: ' + (frm.audMecaFixacaoOk.checked ? 'OK' : frm.audMecaFixacaoNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 75, 'Check do gabarito osso de cachorro de abertura do tampão e medida de 120 ±5mm.: ' + (frm.audMecaCheckGabOk.checked ? 'OK' : frm.audMecaCheckGabNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 80, 'Tubulação de Argônio bem posicionada e com engate específico do LCP.: ' + (frm.audMecaTubArgOk.checked ? 'OK' : frm.audMecaTubArgNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 85, 'Movimentação e articulação dos mecanismos sem agarramento: ' + (frm.audMecaMovArtOk.checked ? 'OK' : frm.audMecaMovArtNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 90, 'Encaixe dos cilíndros do mecanismo: ' + (frm.audMecaEncaixeOk.checked ? 'OK' : frm.audMecaEncaixeNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 100, 'AUDITORIA DE MONTAGEM E ALINHAMENTO DOS MECANISMOS');
+    doc.text(15, 105, 'Responsável: ' + frm.checkLibResponsavel.value);
+    doc.text(15, 110, 'Data: ' + frm.checkLibData.value);
+    doc.text(15, 115, 'Turno: ' + frm.checkLibTurno.value);
+    doc.text(15, 120, 'Letra: ' + frm.checkLibLetra.value);
+    doc.text(15, 125, 'Fixação do mecanismo: ' + (frm.checkLibFixacaoOk.checked ? 'OK' : frm.checkLibFixacaoNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 130, 'Limpeza interna do distribuidor: ' + (frm.checkLibLimpezaOk.checked ? 'OK' : frm.checkLibLimpezaNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 135, 'Situação do corpo e ponta do tampão: ' + (frm.checkLibSituacaoOk.checked ? 'OK' : frm.checkLibSituacaoNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 140, 'Barragens: ' + (frm.checkLibBarragensOk.checked ? 'OK' : frm.checkLibBarragensNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 145, 'Projeção: ' + (frm.checkLibProjecaoOk.checked ? 'OK' : frm.checkLibProjecaoNaoOk.checked ? "NÃO OK" : ""));
+    doc.text(15, 150, 'Inibidor de turbulência: ' + (frm.checkLibInibidorOk.checked ? 'OK' : frm.checkLibInibidorNaoOk.checked ? "NÃO OK" : ""));
+    if(frm.observacoes.value != '')
+    doc.text(15, 160, 'OBSERVAÇÕES NECESSÁRIAS: ' + frm.observacoes.value);
+
+    doc.addPage('1', 'a6');
+    doc.addImage(files[0], 'PNG', 15, 15, 180, 160);
+    doc.addPage('1', 'a6');
+    doc.addImage(files[1], 'PNG', 15, 15, 180, 160);
+    doc.addPage('1', 'a6');
+    doc.addImage(files[2], 'PNG', 15, 15, 180, 160);
+    doc.addPage('1', 'a6');
+    doc.addImage(files[3], 'PNG', 15, 15, 180, 160);
+    doc.save('questionario.pdf');
+    location.reload();
+    return true;
+  }
+  function createImage() {
+    img = new Image();
+    img.onload = imageLoaded;
+    img.src = fr.result;
+  }
+  function imageLoaded() {
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img,0,0);
+    files.push(canvas.toDataURL("image/png"));
+    contador++;
+    if(contador < 4)
+      alocaImagens(flinput[contador]);
+    else
+      salvarPDF();
+  }
+  function alocaImagens(file){
+
+    input = document.getElementById(file);
+    file = input.files[0];
+    fr = new FileReader();
+    fr.onload = createImage;   // onload fires after reading is complete
+    fr.readAsDataURL(file);    // begin reading 
+  }
+  </script>
+</html>

@@ -1,0 +1,46 @@
+<html>
+	<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+	<script>
+		var input, file, fr, img;
+
+		function createImage() {
+            img = new Image();
+            img.onload = imageLoaded;
+            img.src = fr.result;
+        }
+
+        function imageLoaded() {
+            var canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img,0,0);
+			var doc = new jsPDF();
+            doc.setFontSize(40);
+			doc.text(35, 25, 'Paranyan loves jsPDF');
+			doc.addImage(canvas.toDataURL("image/png"), 'PNG', 15, 40, 180, 160); 
+			doc.save('a4.pdf');
+
+            alert(canvas.toDataURL("image/png"));
+        }
+
+		function teste(){
+			alert('teste');
+			input = document.getElementById('file');
+			file = input.files[0];
+			fr = new FileReader();
+			fr.onload = createImage;   // onload fires after reading is complete
+			fr.readAsDataURL(file);    // begin reading
+			alert(fr.result);	
+			
+
+			
+		}
+
+
+	</script>
+
+	<input type="file" id="file"/>
+	<input type="button" id="button" onClick="teste();"/>
+
+</html>
