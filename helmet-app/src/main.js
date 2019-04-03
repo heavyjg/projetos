@@ -5,8 +5,9 @@ import App from './App';
 import VueSwal from 'vue-swal';
 import router from './router';
 import Vuetify from 'vuetify';
-import NProgress from 'vue-nprogress'
+import NProgress from 'nprogress';
 import '@fortawesome/fontawesome-free/css/all.css'
+import '../node_modules/nprogress/nprogress.css';
 
 
 Vue.use(Vuetify);
@@ -16,13 +17,20 @@ Vue.use(Vuetify, {
   iconfont: 'fa'
 });
 
-const nprogress = new NProgress({ parent: '.nprogress-container' });
-
 Vue.config.productionTip = false;
 
+router.beforeResolve((to, from, next) => {
+  if (to.name) {
+    NProgress.start()
+  }
+  next()
+});
+
+router.afterEach(() => {
+  NProgress.done()
+});
 /* eslint-disable no-new */
 new Vue({
-  nprogress,
   el: '#app',
   router,
   components: { App },

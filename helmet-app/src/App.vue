@@ -11,7 +11,7 @@
           <v-list-tile-title>Painel principal</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
-      <router-link v-bind:to="{ name: 'CadastroColaboradores' }">
+      <router-link v-bind:to="{ name: 'CadastroColaboradores' }" class="side_bar_link">
         <v-list-tile>
           <v-list-tile-action>
             <v-icon>fas fa-users</v-icon>
@@ -21,7 +21,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </router-link>
-      <router-link v-bind:to="{ name: 'CadastroEPI' }">
+      <router-link v-bind:to="{ name: 'CadastroEPI' }" class="side_bar_link">
       <v-list-tile>
         <v-list-tile-action>
           <v-icon>fas fa-user-shield</v-icon>
@@ -62,11 +62,8 @@
 </template>
 
 <script>
-import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
+import './assets/stylesheets/main.css';
 export default {
-  components: {
-    NprogressContainer
-  },
   data: () => ({
     drawer: null
   }),
