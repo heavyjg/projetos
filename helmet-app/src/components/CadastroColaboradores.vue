@@ -3,7 +3,7 @@
   <v-container grid-list-md text-xs-center>
     <v-layout row wrap>
       <v-flex xs8 offset-xs2>
-        <h2>Cadastro de colaboradores</h2>
+        <h2>Cadastro de Colaboradores</h2>
         <v-text-field label="Nome do colaborador" maxlength=200 v-model="nome" :rules="nameRules" required></v-text-field>
         <v-text-field label="Cargo do colaborador" maxlength=100 v-model="cargo" :rules="cargoRules" required></v-text-field>
         <v-text-field label="CPF do colaborador" v-model="cpf" :mask="cpfMask" :rules="cpfRules" required></v-text-field>
